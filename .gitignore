@@ -69,6 +69,11 @@ replay_pid*
 # Generated files
 .idea/**/contentModel.xml
 
+# add
+.idea/
+ormi_java.iml
+Main.java
+
 # Sensitive or high-churn files
 .idea/**/dataSources/
 .idea/**/dataSources.ids
