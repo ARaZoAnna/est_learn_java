@@ -1,6 +1,7 @@
 import java.util.Scanner;
+
 public class Java0604 {
- /* int cal(int n){
+  /* int cal(int n){
     int cnt = 1;
     int result = 0;
     while(cnt <= n){
@@ -110,19 +111,39 @@ public class Java0604 {
     }
      System.out.println(count);*/
 
-    for (int i = 9; i > 1; i--) {
-      for (int j = 9; j > 0; j--) {
+    /*for (int i = 9; i > 1; i--) {
+        for (int j = 9; j > 0; j--) {
+          System.out.println(String.format("%s x %s = %s", i, j, i * j));
+        }
+        System.out.println();
+    }*/
+
+    /*int n = 9;
+    for (int i = 2; i <= n; i++) {
+      for (int j = 1; j < 10; j++) {
         System.out.println(String.format("%s x %s = %s", i, j, i * j));
       }
       System.out.println();
-  }
+    }*/
+
+
+    //break continue 문
+    //1부터 10까지 숫자를 출력하세요. 이때 4와 7은 건너뛰고 출력합니다.
+    int n = 0;
+    while(n < 10){
+      n++;
+      if(n == 4 || n == 7){
+        continue;
+      }
+      System.out.print(n + " ");
+    }
+
   }
 }
 
-
 /*int num = 10;
-    while (num >= 0) {
-      System.out.println("현재 카운트 : " + num);
-      num--;
-    }
-    System.out.println("카운트 종료");*/
+while (num >= 0) {
+  System.out.println("현재 카운트 : " + num);
+  num--;
+}
+System.out.println("카운트 종료");*/
