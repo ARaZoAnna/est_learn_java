@@ -18,13 +18,11 @@ public class Food extends Product{
     public int calculatePrice(){
         //지금 현재 날짜 생성
         LocalDate todayDate = LocalDate.now();
-        //유통기한 지나면 안판다.
-        /*if(this.expirationDate.compareTo(todayDate) == -1){
-            return 0;
-        }*/
+
+
         // 현재 날짜와 설정된 유통기한 날짜를 뺀 값
         long daysBetween = this.expirationDate.toEpochDay()-todayDate.toEpochDay() ;
-
+        //유통기한 지나면 안판다.
         if(daysBetween < 0){
             return 0;
         }

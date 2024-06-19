@@ -1,14 +1,23 @@
 public class PremiumShoppingMall extends ShoppingMall {
 
+  private Product[] arryProducts;
   public PremiumShoppingMall(int size) {
     super(size);
+    this.arryProducts = super.getProducts();
   }
 
-  public Boolean checkOrderAvailability(Product product) {
-    System.out.println(product.getName() + " 구매 여부 : ");
-    if (product.getStock() >= 10) {
-      return true;
-    }
-    return false;
+  @Override
+  public Boolean checkOrderAvailability() {
+      int sumStock = 0;
+      for(int i = 0; i < arryProducts.length; i++){
+        sumStock += arryProducts[i].getStock();
+      }
+
+    System.out.println("구매 여부 : ");
+      if(sumStock >= 10){
+        return true;
+      } else{
+        return false;
+      }
   }
 }
