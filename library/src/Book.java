@@ -20,4 +20,19 @@ public class Book<T> {
     public T getIdentifier() {
         return identifier;
     }
+
+    @Override
+    public boolean equals(Object o){
+        Book<T> b2 = (Book<T>) o;
+        if (this.title.equals(b2.getTitle()) && this.author.equals(b2.getAuthor()) && identifier.equals(b2.getIdentifier())){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    @Override
+    public String toString(){
+        return title + " " + author + " " + identifier;
+    }
 }
